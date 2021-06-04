@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 50px',
+    padding: '10px 20px',
   },
   heading: {
     color: 'black',
@@ -17,6 +17,7 @@ export default makeStyles((theme) => ({
   },
   image: {
     marginLeft: '15px',
+    marginTop: '10px',
   },
   toolbar: {
     display: 'flex',
