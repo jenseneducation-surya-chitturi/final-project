@@ -42,17 +42,17 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
-          Please Sign In to create your own memories and like other's memories.
+          Please Sign In to create meetups.
         </Typography>
       </Paper>
     );
   }
 
-  const handleAddChip = (tag) => {
+  const handleAdd = (tag) => {
     setPostData({ ...postData, tags: [...postData.tags, tag] });
   };
 
-  const handleDeleteChip = (chipToDelete) => {
+  const handleDelete= (chipToDelete) => {
     setPostData({ ...postData, tags: postData.tags.filter((tag) => tag !== chipToDelete) });
   };
 
@@ -69,8 +69,8 @@ const Form = ({ currentId, setCurrentId }) => {
             label="Tags"
             fullWidth
             value={postData.tags}
-            onAdd={(chip) => handleAddChip(chip)}
-            onDelete={(chip) => handleDeleteChip(chip)}
+            onAdd={(chip) => handleAdd(chip)}
+            onDelete={(chip) => handleDelete(chip)}
           />
         </div>
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
